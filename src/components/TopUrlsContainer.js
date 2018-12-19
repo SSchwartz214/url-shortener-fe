@@ -20,7 +20,19 @@ class TopUrlsContainer extends Component {
   }
 
   render() {
-    return <div className="">Top 100 Urls</div>;
+    return (
+      <div>
+        {this.state.topUrls.map(url => {
+          return (
+            <div className="list" key={url.short}>
+              <h4>{url.original}</h4>
+              <p>{url.short}</p>
+              <p>{url.title}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 }
 
