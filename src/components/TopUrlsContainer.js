@@ -24,10 +24,10 @@ class TopUrlsContainer extends Component {
       <div>
         {this.state.topUrls.map(url => {
           return (
-            <div className="list" key={url.id}>
-              <h4>{url.original}</h4>
-              <p>{url.short}</p>
+            <div className="tile" key={url.id}>
+              <p>{url.original}</p>
               <p>{url.title}</p>
+              <p>{url.short}</p>
               <p>Total views: {url.clicks}</p>
             </div>
           );
