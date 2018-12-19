@@ -14,7 +14,6 @@ class TopUrlsContainer extends Component {
     axios
       .get("https://url-shortener--api.herokuapp.com/api/v1/top.json")
       .then(response => {
-        console.log(response);
         this.setState({ topUrls: response.data });
       })
       .catch(error => console.log(error));
