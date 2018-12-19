@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Url from "./Url";
 
 class TopUrlsContainer extends Component {
   constructor(props) {
@@ -23,13 +24,7 @@ class TopUrlsContainer extends Component {
     return (
       <div>
         {this.state.topUrls.map(url => {
-          return (
-            <div className="list" key={url.short}>
-              <h4>{url.original}</h4>
-              <p>{url.short}</p>
-              <p>{url.title}</p>
-            </div>
-          );
+          return <Url url={url} key={url.id} />;
         })}
       </div>
     );
