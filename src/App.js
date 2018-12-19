@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import UrlsContainer from "./components/TopUrlsContainer";
+import TopUrlsContainer from "./components/TopUrlsContainer";
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Url Shortener</h1>
         </header>
-        <UrlsContainer />
+        <TopUrlsContainer />
       </div>
     );
   }
