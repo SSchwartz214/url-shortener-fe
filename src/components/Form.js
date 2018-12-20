@@ -50,7 +50,7 @@ class Form extends Component {
         </div>
         {Object.keys(this.state.newUrl).length > 0 && (
           <a
-            href={`https://url-shortener--api.herokuapp.com/api/v1/${
+            href={`https://url-shortener--api.herokuapp.com/${
               this.state.newUrl.short
             }`}
             target="_blank"
