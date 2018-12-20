@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import renderHTML from "react-render-html";
 
 class Form extends Component {
   state = {
