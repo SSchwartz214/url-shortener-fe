@@ -7,19 +7,31 @@ class TopUrlsContainer extends Component {
     super(props);
     this.state = {
       topUrls: []
+      // loading:false,
+      // error: false
     };
   }
 
   componentDidMount() {
+    // this.setState({loading: true})
     axios
       .get("https://url-shortener--api.herokuapp.com/api/v1/top.json")
       .then(response => {
-        this.setState({ topUrls: response.data });
+        this.setState({
+          topUrls: response.data
+          // loading: false
+        });
       })
-      .catch(error => console.log(error));
+      .catch(error => this.setState({ error: error.message }));
   }
 
   render() {
+    // if (this.state.loading) {
+    //   return <h1>Loading...</h1>
+    // }
+    // if (this.state.error) {
+    //   return <h1>this.state.error</h1>
+    // }
     return (
       <div>
         <header className="main-header">
