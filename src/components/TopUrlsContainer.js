@@ -22,9 +22,14 @@ class TopUrlsContainer extends Component {
   render() {
     return (
       <div>
-        {this.state.topUrls.map(url => {
-          return <Url url={url} key={url.id} />;
-        })}
+        <header className="main-header">
+          <h1>Top Urls</h1>
+        </header>
+        <div>
+          {this.state.topUrls.map(url => {
+            return <Url url={url} key={url.id} />;
+          })}
+        </div>
       </div>
     );
   }
