@@ -31,6 +31,9 @@ class Form extends Component {
   render() {
     return (
       <div>
+        <header className="main-header">
+          <h2>Url Shortener</h2>
+        </header>
         <form onSubmit={this.handleSubmit}>
           <label>
             Please Enter Url:
