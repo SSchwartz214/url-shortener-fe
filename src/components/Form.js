@@ -3,7 +3,8 @@ import axios from "axios";
 
 class Form extends Component {
   state = {
-    original: ""
+    original: "",
+    newUrl: {}
   };
 
   handleChange = event => {
@@ -21,7 +22,7 @@ class Form extends Component {
       .post("https://url-shortener--api.herokuapp.com/api/v1/url", { url })
       .then(res => {
         console.log(res);
-        console.log(res.data);
+        this.setState({ newUrl: res.data });
       })
       .catch(error => {
         console.log(error.response);
@@ -31,20 +32,33 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <header className="main-header">
-          <h2>Url Shortener</h2>
-        </header>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Please Enter Url:
-            <input
-              type="text"
-              original="original"
-              onChange={this.handleChange}
-            />
-          </label>
-          <button type="submit">Shorten url</button>
-        </form>
+        <div>
+          <header className="main-header">
+            <h2>Url Shortener</h2>
+          </header>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Please Enter Url:
+              <input
+                type="text"
+                original="original"
+                onChange={this.handleChange}
+              />
+            </label>
+            <button type="submit">Shorten url</button>
+          </form>
+        </div>
+        {Object.keys(this.state.newUrl).length > 0 && (
+          <a
+            href={`https://url-shortener--api.herokuapp.com/api/v1/${
+              this.state.newUrl.short
+            }`}
+            target="_blank"
+          >
+            https://url-shortener--api.herokuapp.com/api/v1/
+            {this.state.newUrl.short}
+          </a>
+        )}
       </div>
     );
   }
