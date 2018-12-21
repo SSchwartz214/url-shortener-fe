@@ -64,3 +64,48 @@
 .nav-link-ltr:hover::before {
   width: 100%;
 }
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #3c3877;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1em;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #4197d6;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #7ca953;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #72c73d;
+  color: white;
+}
+
+form {
+  background-color: #3c3877;
+}
+
+::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #d0cdfa;
+  text-align: center;
+  font-weight: bold;
+}
