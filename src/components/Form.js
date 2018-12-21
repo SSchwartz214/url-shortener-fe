@@ -42,7 +42,7 @@ class Form extends Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          https://url-shortener--api.herokuapp.com/
+          https://url-zapper/
           {this.state.newUrl.short}
         </a>
       );
@@ -54,7 +54,7 @@ class Form extends Component {
       <div>
         <div>
           <header className="main-header">
-            <h2>Url Shortener</h2>
+            <h2>Url Zapper</h2>
           </header>
           <form onSubmit={this.handleSubmit}>
             <label>
@@ -65,7 +65,7 @@ class Form extends Component {
                 onChange={this.handleChange}
               />
             </label>
-            <button type="submit">Shorten url</button>
+            <button type="submit">Zap url</button>
           </form>
         </div>
         {link}
