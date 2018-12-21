@@ -13,3 +13,54 @@
   font-size: 11px;
   text-align: left;
 }
+
+.navbar {
+  padding: 0;
+  margin: 0;
+  font-family: "lato", Arial, Helvetica, sans-serif;
+  background-color: #3c3877;
+  border-bottom: 1px solid #3c3877;
+}
+
+.navbar h2 {
+  color: #ffffff;
+  margin: 0px 0px;
+  padding: 20px;
+}
+
+.navbar .second-word {
+  color: #7ca953;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px 0px;
+  margin: 0px 40px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #7ca953;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 100%;
+}

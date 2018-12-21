@@ -3,14 +3,18 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import TopUrlsContainer from "./TopUrlsContainer";
 import Form from "./Form";
 import NotFound from "./NotFound";
+import NavBar from "./NavBar";
 
 const Router = () => (
   <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Form} />
-      <Route path="/top" component={TopUrlsContainer} />
-      <Route component={NotFound} />
-    </Switch>
+    <div>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Form} />
+        <Route path="/top" component={TopUrlsContainer} />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
   </BrowserRouter>
 );
 
