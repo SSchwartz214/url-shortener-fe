@@ -47,28 +47,27 @@ class Form extends Component {
         </a>
       );
     } else if (Object.keys(this.state.error).length > 0) {
-      link = <h4>Please enter a valid url</h4>;
+      link = <h4>Please enter a valid URL</h4>;
     }
 
     return (
       <div>
-        <div>
-          <header className="main-header">
-            <h2>Url Zapper</h2>
-          </header>
+        <div className="form">
           <form onSubmit={this.handleSubmit}>
-            <label>
-              Please Enter Url:
-              <input
-                type="text"
-                original="original"
-                onChange={this.handleChange}
-              />
-            </label>
-            <button type="submit">Zap url</button>
+            <input
+              type="text"
+              original="original"
+              onChange={this.handleChange}
+              placeholder="Enter URL..."
+            />
+            <button type="submit">Zap</button>
           </form>
         </div>
-        {link}
+        <div class="row">
+          <div class="column">
+            <div class="card">{link}</div>
+          </div>
+        </div>
       </div>
     );
   }
