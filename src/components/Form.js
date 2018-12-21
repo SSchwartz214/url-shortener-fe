@@ -42,7 +42,7 @@ class Form extends Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          https://url-zapper/
+          https://url-shortener--api.herokuapp.com/
           {this.state.newUrl.short}
         </a>
       );
