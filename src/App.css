@@ -1,17 +1,53 @@
-.main-header {
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #3c3877;
+  border-radius: 4px;
   text-align: center;
-  height: 150px;
-  padding: 20px;
+  font-size: 1em;
 }
 
-.tile {
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-  background: lightyellow;
-  float: left;
-  font-size: 11px;
-  text-align: left;
+input[type="text"]:focus {
+  border: 3px solid #4197d6;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #7ca953;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #72c73d;
+  color: white;
+}
+
+form {
+  background-color: #3c3877;
+}
+
+::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #d0cdfa;
+  text-align: center;
+  font-weight: bold;
+}
+
+.link a {
+  color: #3c3877;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
 }
 
 .navbar {
@@ -65,47 +101,37 @@
   width: 100%;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+.tile {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  background: lightyellow;
+  float: left;
+  font-size: 11px;
+  text-align: left;
+}
+
+* {
   box-sizing: border-box;
-  border: 2px solid #3c3877;
-  border-radius: 4px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
   text-align: center;
-  font-size: 1em;
+  background-color: #f1f1f1;
+  color: #d8000c;
 }
 
-input[type="text"]:focus {
-  border: 3px solid #4197d6;
-}
-
-button[type="submit"] {
-  width: 100%;
-  background-color: #7ca953;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  outline: none;
+.card a {
+  color: #3c3877;
   font-weight: bold;
-  font-size: 16px;
 }
 
-button[type="submit"]:hover {
-  background-color: #72c73d;
-  color: white;
-}
-
-form {
-  background-color: #3c3877;
-}
-
-::-webkit-input-placeholder {
-  font-size: 14px;
-  color: #d0cdfa;
-  text-align: center;
-  font-weight: bold;
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }

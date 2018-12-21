@@ -47,12 +47,12 @@ class Form extends Component {
         </a>
       );
     } else if (Object.keys(this.state.error).length > 0) {
-      link = <h4>Please enter a valid url</h4>;
+      link = <h4>Please enter a valid URL</h4>;
     }
 
     return (
       <div>
-        <div>
+        <div className="form">
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
@@ -63,7 +63,11 @@ class Form extends Component {
             <button type="submit">Zap</button>
           </form>
         </div>
-        {link}
+        <div class="row">
+          <div class="column">
+            <div class="card">{link}</div>
+          </div>
+        </div>
       </div>
     );
   }
