@@ -4,7 +4,8 @@ import axios from "axios";
 class Form extends Component {
   state = {
     original: "",
-    newUrl: {}
+    newUrl: {},
+    error: {}
   };
 
   handleChange = event => {
@@ -21,10 +22,11 @@ class Form extends Component {
     axios
       .post("https://url-shortener--api.herokuapp.com/api/v1/url", { url })
       .then(res => {
+        console.log(res);
         this.setState({ newUrl: res.data });
       })
       .catch(error => {
-        return error.response;
+        this.setState({ error: error.response });
       });
   };
 
@@ -47,22 +49,18 @@ class Form extends Component {
             <button type="submit">Shorten url</button>
           </form>
         </div>
-        {(Object.keys(this.state.newUrl).length > 0 &&
-          this.state.newUrl.short !== undefined && (
-            <a
-              href={`https://url-shortener--api.herokuapp.com/${
-                this.state.newUrl.short
-              }`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://url-shortener--api.herokuapp.com/api/v1/
-              {this.state.newUrl.short}
-            </a>
-          )) ||
-          (Object.keys(this.state.newUrl).length > 0 && (
-            <h4>Please enter a valid url</h4>
-          ))}
+        {Object.keys(this.state.newUrl).length > 0 && (
+          <a
+            href={`https://url-shortener--api.herokuapp.com/${
+              this.state.newUrl.short
+            }`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://url-shortener--api.herokuapp.com/
+            {this.state.newUrl.short}
+          </a>
+        )}
       </div>
     );
   }
