@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Url from "./Url";
+import loading from "./loading.gif";
 
 class TopUrlsContainer extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class TopUrlsContainer extends Component {
 
   render() {
     if (this.state.loading) {
-      return <h1>Loading...</h1>;
+      return <img className="loading" src={loading} alt="loading" />;
     }
     if (this.state.error) {
       return <h1>this.state.error</h1>;
@@ -35,9 +36,9 @@ class TopUrlsContainer extends Component {
     return (
       <div>
         <header className="main-header">
-          <h1>Top Urls</h1>
+          <h1 className="top-title">Top Urls</h1>
         </header>
-        <div>
+        <div className="list-container">
           {this.state.topUrls.map(url => {
             return <Url url={url} key={url.id} />;
           })}

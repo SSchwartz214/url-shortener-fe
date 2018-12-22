@@ -1,9 +1,10 @@
 import React from "react";
+import chart from "./chart.svg";
 
 const Url = ({ url }) => (
-  <div className="tile" key={url.short}>
-    <p>{url.original}</p>
-    <p>{url.title}</p>
+  <div className="list-tile" key={url.short}>
+    <h2>{url.title}</h2>
+    <p className="original">{url.original}</p>
     <a
       href={`https://url-shortener--api.herokuapp.com/${url.short}`}
       target="_blank"
@@ -12,7 +13,11 @@ const Url = ({ url }) => (
       https://url-shortener--api.herokuapp.com/
       {url.short}
     </a>
-    <p>Total views: {url.clicks}</p>
+    <div className="count-box">
+      <p>
+        <img className="chart" src={chart} alt="chart" /> {url.clicks}
+      </p>
+    </div>
   </div>
 );
 

@@ -35,19 +35,25 @@ class Form extends Component {
 
     if (Object.keys(this.state.newUrl).length > 0) {
       link = (
-        <a
-          href={`https://url-shortener--api.herokuapp.com/${
-            this.state.newUrl.short
-          }`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          https://url-shortener--api.herokuapp.com/
-          {this.state.newUrl.short}
-        </a>
+        <div className="card">
+          <a
+            href={`https://url-shortener--api.herokuapp.com/${
+              this.state.newUrl.short
+            }`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://url-shortener--api.herokuapp.com/
+            {this.state.newUrl.short}
+          </a>
+        </div>
       );
     } else if (Object.keys(this.state.error).length > 0) {
-      link = <h4>Please enter a valid URL</h4>;
+      link = (
+        <div className="card">
+          <h4>Please enter a valid URL (must contain https:// or http://) </h4>
+        </div>
+      );
     }
 
     return (
@@ -63,7 +69,7 @@ class Form extends Component {
             <button type="submit">Zap</button>
           </form>
         </div>
-        <div class="card">{link}</div>
+        {link}
       </div>
     );
   }
