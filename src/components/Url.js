@@ -1,5 +1,5 @@
 import React from "react";
-import chart from "./chart.svg";
+import chart from "../images/chart.svg";
 
 const Url = ({ url }) => (
   <div className="list-tile" key={url.short}>
