@@ -47,6 +47,7 @@ Once the server is running, visit in your browser:
 
 * [React] (https://reactjs.org/)
 * [Ruby on Rails] (https://rubyonrails.org/)
+* (SideKiq) [https://sidekiq.org/]
 
 #### Questions or comments?
 
