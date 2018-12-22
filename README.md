@@ -4,7 +4,7 @@
 
 An application that allows users to input a url and have it shortened to a custom url.  Users can visit the original url by clicking on the shortened url as well as view the top 100 most visited urls.
 
-<img width="1440" alt="screen shot 2018-12-21 at 10 21 27 pm" src="https://user-images.githubusercontent.com/30695131/50371070-d89aa400-0570-11e9-985a-1c5546fe7ae7.png">
+<img width="1440" alt="screen shot 2018-12-21 at 10 39 39 pm" src="https://user-images.githubusercontent.com/30695131/50371104-69717f80-0571-11e9-9408-58426933f345.png">
 
 <img width="1440" alt="screen shot 2018-12-21 at 10 34 57 pm" src="https://user-images.githubusercontent.com/30695131/50371067-b86ae500-0570-11e9-9223-700358abf743.png">
 
