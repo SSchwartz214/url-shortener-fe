@@ -2,7 +2,7 @@
 
 #### Description
 
-An application that allows users to input a url and have it shortened to a custom url.  Users can visit the original url by clicking on the shortened url as well as view the top 100 most visited urls.
+This application generates shortened URL's from user inputted URL's.  A background worker is used to scrape the websites for their titles. Additionally there is a top 100 page that ranks displays and ranks the URL's based on visits. 
 
 <img width="1440" alt="screen shot 2018-12-21 at 10 39 39 pm" src="https://user-images.githubusercontent.com/30695131/50371104-69717f80-0571-11e9-9408-58426933f345.png">
 
@@ -45,9 +45,10 @@ Once the server is running, visit in your browser:
 
 ## Built With
 
-* [React] (https://reactjs.org/)
-* [Ruby on Rails] (https://rubyonrails.org/)
-* (SideKiq) [https://sidekiq.org/]
+* [React](https://reactjs.org/)
+* [Ruby on Rails](https://rubyonrails.org/)
+* [SideKiq](https://sidekiq.org/)
+* [Redis](https://redis.io/)
 
 #### Questions or comments?
 
