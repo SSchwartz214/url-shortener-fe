@@ -30,11 +30,9 @@ class Form extends Component {
       });
   };
 
-  render() {
-    let link;
-
+  displayLink = () => {
     if (Object.keys(this.state.newUrl).length > 0) {
-      link = (
+      return (
         <div className="card">
           <a
             href={`https://url-shortener--api.herokuapp.com/${
@@ -49,13 +47,15 @@ class Form extends Component {
         </div>
       );
     } else if (this.state.error) {
-      link = (
+      return (
         <div className="card">
           <h4>Please enter a valid URL (must contain https:// or http://) </h4>
         </div>
       );
     }
+  };
 
+  render() {
     return (
       <div>
         <div className="form">
@@ -70,7 +70,7 @@ class Form extends Component {
             <button type="submit">Zap</button>
           </form>
         </div>
-        {link}
+        {this.displayLink()}
       </div>
     );
   }
