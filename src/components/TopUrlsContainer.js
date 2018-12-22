@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Url from "./Url";
-import loading from "./loading.gif";
+import loading from "../images/loading.gif";
 
 class TopUrlsContainer extends Component {
   constructor(props) {
