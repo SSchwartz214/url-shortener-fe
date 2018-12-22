@@ -49,10 +49,11 @@ class Form extends Component {
         </div>
       );
     } else if (Object.keys(this.state.error).length > 0) {
-      link = 
+      link = (
         <div className="card">
-          <h4>Please enter a valid URL</h4>
+          <h4>Please enter a valid URL (must contain https:// or http://) </h4>
         </div>
+      );
     }
 
     return (

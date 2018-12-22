@@ -105,14 +105,16 @@ form {
   width: 100%;
 }
 
-.tile {
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-  background: lightyellow;
-  float: left;
-  font-size: 11px;
-  text-align: left;
+.chart {
+  width: 20px;
+  height: 20px;
+}
+
+.loading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
 }
 
 .card {
@@ -128,19 +130,11 @@ form {
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
 .list-tile {
   padding: 20px;
   display: block;
   margin: 0 0 30px 0;
-  background: lightyellow;
+  background: #f1f1f1;
   font-size: 11px;
   text-align: left;
   position: relative;
@@ -149,9 +143,15 @@ form {
 .list-tile:hover {
   opacity: 0.8;
 }
+
 .list-tile h2 {
   color: #3c3877;
   margin: 0 0 10px 0;
+}
+
+.list-tile a {
+  color: #7ca953;
+  font-weight: bold;
 }
 
 .list-container {
@@ -159,14 +159,30 @@ form {
   margin: 0 auto;
 }
 
+.count-box {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+
+.main-header {
+  text-align: center;
+}
+
+.top-title {
+  color: #3c3877;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .list-container {
     width: 96%;
   }
-}
-
-.count-box {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
 }

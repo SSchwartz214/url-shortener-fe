@@ -1,4 +1,5 @@
 import React from "react";
+import chart from "./chart.svg";
 
 const Url = ({ url }) => (
   <div className="list-tile" key={url.short}>
@@ -12,9 +13,10 @@ const Url = ({ url }) => (
       https://url-shortener--api.herokuapp.com/
       {url.short}
     </a>
-    <div class="count-box">
-      <p>Total views: {url.clicks}</p>
-      {/* image */}
+    <div className="count-box">
+      <p>
+        <img className="chart" src={chart} alt="chart" /> {url.clicks}
+      </p>
     </div>
   </div>
 );
