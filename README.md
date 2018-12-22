@@ -45,9 +45,11 @@ Once the server is running, visit in your browser:
 
 ## Built With
 
-* [React](https://reactjs.org/)
+* [React] (https://reactjs.org/)
 * [Ruby on Rails] (https://rubyonrails.org/)
 
-## Contributors
+#### Questions or comments?
 
-* Seth: https://github.com/SSchwartz214
+Please contact me at:
+
+* Seth: sschwartz214@gmail.com
