@@ -5,7 +5,7 @@ class Form extends Component {
   state = {
     original: "",
     newUrl: {},
-    error: {}
+    error: null
   };
 
   handleChange = event => {
@@ -14,7 +14,6 @@ class Form extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    event.target.reset();
 
     const url = {
       original: this.state.original
@@ -23,18 +22,17 @@ class Form extends Component {
     axios
       .post("https://url-shortener--api.herokuapp.com/api/v1/url", { url })
       .then(res => {
-        this.setState({ newUrl: res.data, error: {} });
+        console.log(res);
+        this.setState({ newUrl: res.data, original: "", error: null });
       })
       .catch(error => {
         this.setState({ error: error, newUrl: {} });
       });
   };
 
-  render() {
-    let link;
-
+  displayLink = () => {
     if (Object.keys(this.state.newUrl).length > 0) {
-      link = (
+      return (
         <div className="card">
           <a
             href={`https://url-shortener--api.herokuapp.com/${
@@ -48,20 +46,23 @@ class Form extends Component {
           </a>
         </div>
       );
-    } else if (Object.keys(this.state.error).length > 0) {
-      link = (
+    } else if (this.state.error) {
+      return (
         <div className="card">
           <h4>Please enter a valid URL (must contain https:// or http://) </h4>
         </div>
       );
     }
+  };
 
+  render() {
     return (
       <div>
         <div className="form">
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
+              value={this.state.original}
               original="original"
               onChange={this.handleChange}
               placeholder="Enter URL..."
@@ -69,7 +70,7 @@ class Form extends Component {
             <button type="submit">Zap</button>
           </form>
         </div>
-        {link}
+        {this.displayLink()}
       </div>
     );
   }

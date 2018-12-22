@@ -2,7 +2,7 @@ import React from "react";
 import chart from "../images/chart.svg";
 
 const Url = ({ url }) => (
-  <div className="list-tile" key={url.short}>
+  <div className="list-tile">
     <h2>{url.title}</h2>
     <p className="original">{url.original}</p>
     <a
