@@ -37,7 +37,7 @@ class TopUrlsContainer extends Component {
         <header className="main-header">
           <h1>Top Urls</h1>
         </header>
-        <div>
+        <div className="list-container">
           {this.state.topUrls.map(url => {
             return <Url url={url} key={url.id} />;
           })}
