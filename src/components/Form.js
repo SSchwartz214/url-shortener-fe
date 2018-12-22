@@ -14,6 +14,7 @@ class Form extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    event.target.reset();
 
     const url = {
       original: this.state.original
@@ -22,11 +23,10 @@ class Form extends Component {
     axios
       .post("https://url-shortener--api.herokuapp.com/api/v1/url", { url })
       .then(res => {
-        console.log(res);
-        this.setState({ newUrl: res.data });
+        this.setState({ newUrl: res.data, error: {} });
       })
       .catch(error => {
-        this.setState({ error: error });
+        this.setState({ error: error, newUrl: {} });
       });
   };
 
@@ -63,11 +63,7 @@ class Form extends Component {
             <button type="submit">Zap</button>
           </form>
         </div>
-        <div class="row">
-          <div class="column">
-            <div class="card">{link}</div>
-          </div>
-        </div>
+        <div class="card">{link}</div>
       </div>
     );
   }

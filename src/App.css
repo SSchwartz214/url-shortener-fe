@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 input[type="text"] {
   width: 100%;
   padding: 12px 20px;
@@ -111,12 +115,8 @@ form {
   text-align: left;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
