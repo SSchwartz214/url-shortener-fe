@@ -22,7 +22,6 @@ class Form extends Component {
     axios
       .post("https://url-shortener--api.herokuapp.com/api/v1/url", { url })
       .then(res => {
-        console.log(res);
         this.setState({ newUrl: res.data, original: "", error: null });
       })
       .catch(error => {
