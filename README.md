@@ -1,44 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Url Zapper
 
-## Available Scripts
+#### Description
 
-In the project directory, you can run:
+An application that allows users to input a url and have it shortened to a custom url.  Users can visit the original url by clicking on the shortened url as well as view the top 100 most visited urls.
 
-### `npm start`
+<img width="400" alt="screen shot 2018-11-12 at 12 41 54 pm" src="https://user-images.githubusercontent.com/30695131/50370966-d8010e00-056e-11e9-84bf-81977c1a002c.png">
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img width="1440" alt="screen shot 2018-12-21 at 10 34 57 pm" src="https://user-images.githubusercontent.com/30695131/50371067-b86ae500-0570-11e9-9223-700358abf743.png">
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+### Algorithm 
+My method "generate_short" takes the database id for a url and converts it into it’s Base 36 equivalent.  Since every url has a unique id no url will ever have the same Base 36 equivalent and as a result will never have the same shortened url.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## To view in production, visit:
 
-### `npm run build`
+https://url-zapper.herokuapp.com/
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Initial Setup
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+1. Clone this repository 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```shell
+  git clone https://github.com/SSchwartz214/url-shortener-fe.git
+  ```
+  
+2. Change into the `url-shortener-fe` directory
 
-### `npm run eject`
+3. Install dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  ```shell
+  npm install
+  ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Running the Server Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To see the code in action locally, you need to fire up a development server. Use the command:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```shell
+npm start
+```
 
-## Learn More
+Once the server is running, visit in your browser:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* `http://localhost:3000/` to run the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Built With
+
+* [React](https://reactjs.org/)
+* [Ruby on Rails] (https://rubyonrails.org/)
+
+## Contributors
+
+* Seth: https://github.com/SSchwartz214
