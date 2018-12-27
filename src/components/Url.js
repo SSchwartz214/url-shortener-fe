@@ -10,7 +10,7 @@ const Url = ({ url }) => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      https://url-shortener--api.herokuapp.com/
+      https://url-zapper-be.herokuapp.com/
       {url.short}
     </a>
     <div className="count-box">
