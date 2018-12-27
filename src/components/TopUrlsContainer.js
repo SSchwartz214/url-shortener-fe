@@ -16,7 +16,7 @@ class TopUrlsContainer extends Component {
   componentDidMount() {
     this.setState({ loading: true });
     axios
-      .get("https://url-shortener--api.herokuapp.com/api/v1/top.json")
+      .get("https://url-zapper-be.herokuapp.com/api/v1/top.json")
       .then(response => {
         this.setState({
           topUrls: response.data,

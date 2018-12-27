@@ -6,7 +6,7 @@ const Url = ({ url }) => (
     <h2>{url.title}</h2>
     <p className="original">{url.original}</p>
     <a
-      href={`https://url-shortener--api.herokuapp.com/${url.short}`}
+      href={`https://url-zapper-be.herokuapp.com/${url.short}`}
       target="_blank"
       rel="noopener noreferrer"
     >

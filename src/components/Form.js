@@ -20,7 +20,7 @@ class Form extends Component {
     };
 
     axios
-      .post("https://url-shortener--api.herokuapp.com/api/v1/url", { url })
+      .post("https://url-zapper-be.herokuapp.com/api/v1/url", { url })
       .then(res => {
         this.setState({ newUrl: res.data, original: "", error: null });
       })
@@ -34,13 +34,13 @@ class Form extends Component {
       return (
         <div className="card">
           <a
-            href={`https://url-shortener--api.herokuapp.com/${
+            href={`https://url-zapper-be.herokuapp.com/${
               this.state.newUrl.short
             }`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://url-shortener--api.herokuapp.com/
+            https://url-zapper-be.herokuapp.com/
             {this.state.newUrl.short}
           </a>
         </div>
